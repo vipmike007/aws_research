@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script>
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                var linkDataProperty = document.getElementById("linkDataProperty");
+		var searchstring = linkDataProperty.value;
+                var ep = "https://ahubh52730.execute-api.us-east-1.amazonaws.com/default/Test1";
+                var url = ep+"?key="+searchstring;
+                xhttp.onreadystatechange = function() {
+                    if (xhttp.readyState == 4 ) {
+			if (xhttp.status == 200) {
+				var propertiesXML = xhttp.responseText;
+                   		document.getElementById("my-demo").innerHTML = xhttp.responseText;
+                    	}
+		    	else {
+				document.getElementById("my-demo").innerHTML = xhttp.responseText;
+		    	}
+                    }
+		    else {
+		    	document.getElementById("my-demo").innerHTML = xhttp.responseText;	
+		    }
+		}
+                xhttp.open("POST", url, true);
+                xhttp.send();
+
+            }
+
+        </script>
+		
+    </head>
+<body>
+    <div align="center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>GoodLuck: <span id="my-demo">Mike Test</span></h1>
+	<input style="width:25%;" id="linkDataProperty" name="linkData.linkDataProperty" type="text" 
+onkeyup="getLinkData();" />
+        <button onclick="myFunction()">search</button>
+        <br>
+
+    </div>
+
+    </body>
+</html>

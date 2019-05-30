@@ -1,7 +1,7 @@
-#aws_research
+# aws_research
 此项目为了实现无服务器架构的搜索引擎。
 
-##设计架构如下。 (dynamoDB+lambda + API Gateway+S3 ）
+## 设计架构如下。 (dynamoDB+lambda + API Gateway+S3 ）
 * dynamoDB (预定义数据库如下）
   * Name    Results
   * mike    resultsmike
@@ -18,9 +18,9 @@ https://ahubh52730.execute-api.us-east-1.amazonaws.com/default/Test1?key=test
 
 *  S3 静态页面去调用 （实现，不能确定是api的原因还是js的原因，我把我所有的测试结果说下）
 
-##测试结果
+## 测试结果
 目前只能通过postman 去做后台的调用，是成功的。
-1.postman method- post  ,
+* postman method- post  ,
 url - https://ahubh52730.execute-api.us-east-1.amazonaws.com/default/Test1?key=test  (key=test模拟的输入test的情况）
 如下返回值
 ```
@@ -33,7 +33,8 @@ url - https://ahubh52730.execute-api.us-east-1.amazonaws.com/default/Test1?key=t
 }
 * 注意 test2 和 test1是从dynomoDB取出的模拟联想输入的值
 ```
-通过index.html
+
+* 通过index.html
 如下代码总是有问题（暂时没用keyup因为还在debug问题
 ```
             function myFunction() {

@@ -1,5 +1,5 @@
 # aws_research
-此项目为了实现无服务器架构的搜索引擎。
+此项目为了实现无服务器架构的搜索引擎。目前由后台部分没有问题 用postman 调用  https://ahubh52730.execute-api.us-east-1.amazonaws.com/default/Test1?key=<模拟输入关键字> 测试
 
 ## 设计架构如下。 (dynamoDB+lambda + API Gateway+S3 ）
 * dynamoDB (预定义数据库如下）
